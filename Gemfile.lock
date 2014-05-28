@@ -67,6 +67,7 @@ GEM
       celluloid (>= 0.15.2)
       rb-fsevent (>= 0.9.3)
       rb-inotify (>= 0.9)
+    log_buddy (0.7.0)
     lumberjack (1.0.5)
     mail (2.5.4)
       mime-types (~> 1.16)
@@ -159,6 +160,7 @@ DEPENDENCIES
   faker
   guard
   guard-rspec
+  log_buddy
   rack-contrib
   rails (~> 4.1.1)
   rb-fsevent

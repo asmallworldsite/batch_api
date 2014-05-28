@@ -13,6 +13,7 @@ group :development, :test do
   gem 'faker'
   gem 'timecop'
   gem "debugger", platform: :mri
+  gem 'log_buddy' # for easy logging :)
 
   if RUBY_PLATFORM =~ /darwin/
     # OS X integration
