@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>ACE in Action</title>
+<style type="text/css" media="screen">
+    #editor {
+        width:600px;
+        height:200px;
+    }
+    #center{
+      width: 750px;
+      margin: 30px auto;
+    }
+</style>
+</head>
+<body>
+
+<div id="center">
+  <h3>Hit run to execute batch requetst against the server</h3>
+  <div id="editor">$.post('/batch', {
+    ops: [
+            {method: "get", url: "/endpoint"},
+            {method: "get", url: "/endpoint"}
+          ], sequential: true
+    }
+  )
+  </div>
+  <p><button id="run-code">RUN</button></p>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/ace/1.1.3/ace.js" type="text/javascript" charset="utf-8"></script>
+<script>
+    var editor = ace.edit("editor");
+    editor.setTheme("ace/theme/clouds");
+    editor.getSession().setMode("ace/mode/javascript");
+    $('#run-code').on('click', function(){
+      eval(editor.getValue())
+    })
+</script>
+</body>
+</html>
