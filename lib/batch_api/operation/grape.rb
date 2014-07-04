@@ -3,7 +3,7 @@ require 'batch_api/response'
 module BatchApi
   # Public: an individual batch operation.
   module Operation
-    class Rack
+    class Grape
       attr_accessor :method, :url, :params, :headers
       attr_accessor :env, :app, :result, :options
 
