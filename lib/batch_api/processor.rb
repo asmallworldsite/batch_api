@@ -91,8 +91,8 @@ module BatchApi
     #
     # Returns Batch::Operation::(Rack|Rails) depending on the environment
     def self.operation_klass
-      Operation::Rack
-      # BatchApi.rails? ? Operation::Rails : Operation::Rack
+      #TODO use Operation::Rack if grape
+      BatchApi.rails? ? Operation::Rails : Operation::Rack
     end
 
     # Internal: Processes any other provided options for validity.

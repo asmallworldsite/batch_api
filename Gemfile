@@ -12,7 +12,7 @@ group :development, :test do
   gem 'guard-rspec'
   gem 'faker'
   gem 'timecop'
-  gem "debugger", platform: :mri
+  # gem "debugger", platform: :mri
 
   if RUBY_PLATFORM =~ /darwin/
     # OS X integration
@@ -20,3 +20,4 @@ group :development, :test do
     gem "rb-fsevent"
   end
 end
+gem 'pry'
