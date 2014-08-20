@@ -1,5 +1,9 @@
 [![Build Status](https://secure.travis-ci.org/arsduo/batch_api.png?branch=master)](http://travis-ci.org/arsduo/batch_api)
 
+## About this Fork
+
+Make it work with rails4/ruby2
+
 ## What's this?
 
 A gem that provides a RESTful Batch API for Rails and other Rack applications.

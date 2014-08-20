@@ -82,6 +82,9 @@ module BatchApi
           "#{ops.length} were provided"
       else
         ops.map do |op|
+          # Due to inconsistent parsing results between ajax and specs requests
+          # we need to fix the 'op' result
+          op = op[1] if op && op.is_a?(Array)
           self.class.operation_klass.new(op, @env, @app)
         end
       end
